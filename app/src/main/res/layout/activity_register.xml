@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jayti.geekon.Register">
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:shrinkColumns="0"
+        android:background="#ffffff">
+
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/nick_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="left"
+                android:padding="15dip"
+                android:text="@string/nickname"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="17sp" />
+            <EditText
+                android:id="@+id/nickname_input"
+                android:padding="15dip"
+                android:gravity="left"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:textAlignment="gravity"
+                android:hint="@string/nickname"
+                android:layout_height="wrap_content"
+                android:nextFocusForward="@+id/email_input"
+                android:imeOptions="actionNext"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="17sp" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="left"
+                android:padding="15dip"
+                android:text="@string/email"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="17sp" />
+            <EditText
+                android:id="@+id/email_input"
+                android:padding="15dip"
+                android:gravity="left"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:textAlignment="gravity"
+                android:hint="@string/emailHint"
+                android:layout_height="wrap_content"
+                android:nextFocusForward="@+id/password_input"
+                android:imeOptions="actionNext"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="left"
+                android:padding="15dip"
+                android:text="@string/password"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/password_input"
+                android:padding="15dip"
+                android:gravity="left"
+                android:hint="@string/password"
+                android:textAlignment="gravity"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:nextFocusForward="@+id/country_input"
+                android:imeOptions="actionNext"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:inputType="textPassword"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="left"
+                android:padding="15dip"
+                android:text="@string/country"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="17sp" />
+
+            <Spinner
+                android:id="@+id/country_input"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:prompt="@string/country"
+                android:nextFocusForward="@+id/state_input"
+                android:imeOptions="actionNext"
+                />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="left"
+                android:padding="15dip"
+                android:text="@string/state"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="17sp" />
+            <Spinner
+                android:id="@+id/state_input"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:prompt="@string/state"
+                android:nextFocusForward="@+id/city_input"
+                android:imeOptions="actionNext"
+                />
+        </TableRow>
+
+        <TableRow
+            android:paddingTop="40dp"
+            android:paddingBottom="25dp"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/done_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/rounded_button"
+                android:onClick="onClick"
+                android:text="@string/submit"
+                android:textColor="#fff" />
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

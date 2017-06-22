@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jayti.geekon.Login"
+    android:background="#ffffff"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/contact_form_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Geek On"
+        android:textSize="40sp"
+        android:typeface="serif"
+        tools:layout_editor_absoluteY="7dp"
+        tools:layout_editor_absoluteX="70dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:id="@+id/inputEmail"
+        android:layout_marginTop="50dp"
+        tools:layout_editor_absoluteY="106dp"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="Password"
+        android:inputType="textWebPassword"
+        android:id="@+id/inputPassword"
+        tools:layout_editor_absoluteY="177dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+<TableRow android:weightSum="10" android:layout_marginTop="50dp" android:layout_height="wrap_content" android:layout_width="match_parent">
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="#fff"
+        android:text="@string/login_text"
+        android:layout_weight="5"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="259dp"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:id="@+id/signUpBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_weight="5"
+        android:background="@drawable/rounded_button"
+        android:text="@string/sign_upText"
+        android:textColor="#fff"
+        android:layout_marginLeft="10dp"/>
+</TableRow>
+</LinearLayout>
